@@ -1,0 +1,17 @@
+Create resourceGroup
+az group create --name MyResourceGroup --location eastusIR
+
+Create a VM
+
+# create Bash shell variable
+vmName=TutorialVM1
+
+az vm create \
+  --resource-group $resourceGroup \
+  --name $vmName \
+  --image Ubuntu2204 \
+  --vnet-name $vnetName \
+  --subnet $subnetName \
+  --generate-ssh-keys \
+  --output json \
+  --verbose 
