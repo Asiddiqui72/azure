@@ -15,3 +15,11 @@ az vm create \
   --generate-ssh-keys \
   --output json \
   --verbose 
+
+To create a storage account by deploying a resource group in Azure, you can use an ARM (Azure Resource Manager) template along with the az deployment group create command. Here's the basic syntax:
+az deployment group create \
+    --name <deployment_name> \
+    --resource-group <resource_group_name> \
+    --template-file <path_to_arm_template_file> \
+    --parameters @<path_to_parameters_file>
+
